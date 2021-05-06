@@ -3,6 +3,7 @@
 @import url("../styles/alarm.css");
 @import url("../styles/alarm-count.css");
 @import url("../styles/tempo.css");
+@import url("../styles/tempo-config.css");
 
 /* roboto-regular - latin */
 @font-face {
@@ -150,6 +151,7 @@ body {
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
+  font-family: "Roboto";
 }
 
 ul,
