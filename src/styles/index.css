@@ -4,6 +4,9 @@
 @import url("../styles/alarm-count.css");
 @import url("../styles/tempo.css");
 @import url("../styles/tempo-config.css");
+@import url("../styles/tempo-done.css");
+@import url("../styles/chrono.css");
+@import url("../styles/watches.css");
 
 /* roboto-regular - latin */
 @font-face {
