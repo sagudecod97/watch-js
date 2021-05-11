@@ -189,3 +189,7 @@ a:link {
   background-color: transparent;
   cursor: pointer;
 }
+
+.not-show {
+  display: none;
+}

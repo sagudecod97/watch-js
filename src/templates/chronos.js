@@ -8,7 +8,11 @@ const ChronoLaps = () => {
         </div>
 
         <div class="chrono-laps_time">
-            
+            <div class="chrono-laps_time-lap">
+                <p>1</p>
+                <p>01:07:02.30</p>
+                <p>01:22:02.65</p>
+            </div>
         </div>
     </div>
     `;
@@ -30,6 +34,7 @@ const ChronoLap = () => {
 
 const Chrono = () => {
     const view = `
+
     <div class="chrono">
         <p class="chrono_time">16:12<span class="chrono_time-ms">.25</span></p>
 
@@ -43,6 +48,6 @@ const Chrono = () => {
     return view;
 };
 
-export default {
+export {
     Chrono, ChronoLaps, ChronoLap
 };

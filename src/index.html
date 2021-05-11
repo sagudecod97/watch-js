@@ -7,23 +7,24 @@
     <link rel="stylesheet" href="./styles/index.css" type="text/css" >
     <link rel="stylesheet" href="./styles/layout.css" type="text/css" >
     <link rel="stylesheet" href="./assets/fonts/style.css" type="text/css">
+    <script src="./index.js" defer type="module"></script>
     <title>Watch JS</title>
 </head>
 
 <body>
     <header class="header">
         <ul class="header_list">
-            <li class="header_list-item">Alarma</li>
-            <li class="header_list-item">Temporizador</li>
-            <li class="header_list-item">Cronómetro</li>
-            <li class="header_list-item active">Reloj</li>
+            <li class="header_list-item alarm-head active">Alarma</li>
+            <li class="header_list-item timer-head">Temporizador</li>
+            <li class="header_list-item chrono-head">Cronómetro</li>
+            <li class="header_list-item watch-head">Reloj</li>
         </ul>
 
         <div class="header_shadow"></div>
     </header>
 
     <main class="main">
-        <div class="main_content">
+        <div id="main-content" class="main_content">
         </div>
         <div class="main_shadow"></div>
 
@@ -52,8 +53,8 @@
         </ul>
     </footer>
 
-    <!--<div class="alarm-container">
+    <div class="alarm-container not-show">
         
-    </div> -->
+    </div>
 </body>
 </html>
