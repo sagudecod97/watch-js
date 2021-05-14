@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/index.css" type="text/css" >
-    <link rel="stylesheet" href="./styles/layout.css" type="text/css" >
+    <link rel="stylesheet" href="./styles/index.css" type="text/css">
+    <link rel="stylesheet" href="./styles/layout.css" type="text/css">
     <link rel="stylesheet" href="./assets/fonts/style.css" type="text/css">
     <script src="./index.js" defer type="module"></script>
+    <script src="./utils/views-scripts/alarm-script.js" defer type="module"></script>
+    <script src="./utils/views-scripts/alarm-modal-script.js" defer type="module"></script>
     <title>Watch JS</title>
 </head>
 
 <body>
     <header class="header">
         <ul class="header_list">
-            <li class="header_list-item alarm-head active">Alarma</li>
+            <li class="header_list-item alarm-head active">
+                <a href="">Alarma</a>
+            </li>
             <li class="header_list-item timer-head">Temporizador</li>
             <li class="header_list-item chrono-head">Cronómetro</li>
             <li class="header_list-item watch-head">Reloj</li>
@@ -25,12 +30,47 @@
 
     <main class="main">
         <div id="main-content" class="main_content">
+            <p class="main_content-date">Sábado, 1 de Mayo de 2021</p>
+            <p class="main_content-hour">00:00:00</p>
+
+            <div class="main_content-options">
+                <label class="main_content-options_opt">
+                    <input id="twelve" type="radio" value="12" />12 Horas
+                </label>
+
+                <div class="main_content-options_separator"></div>
+
+                <label class="main_content-options_opt">
+                    <input id="twenty-four" type="radio" value="24"/>24 Horas
+                </label>
+            </div>
+
+            <div class="main_content-config">
+                <button class="button main_content-config_btn">CONFIGURAR</button>
+            </div>
+
+            <div class="alarm-count not-show">
+                <p class="alarm-count_hour">19:15:07</p>
+                <p class="alarm-count_date">Domingo, 2 de mayo de 2021</p>
+        
+                <div class="alarm-count_separator"></div>
+        
+                <p class="alarm-count_title">Alarma</p>
+        
+                <p class="alarm-count_alarm">21:09</p>
+                <p class="icon-alarm alarm-count_icon-alarm"></p>
+        
+                <p class="alarm-count_temp">01:01:26</p>
+                <p class="icon-stopwatch alarm-count_icon-stop"></p>
+        
+                <button class="button alarm-count_btn">Desactivar</button>
+            </div>
         </div>
         <div class="main_shadow"></div>
 
-        <img class="main_img" alt="Watch" src="./assets/images/murray-campbell-B_TdfGFuGwA-unsplash.jpg"/>
+        <img class="main_img" alt="Watch" src="./assets/images/murray-campbell-B_TdfGFuGwA-unsplash.jpg" />
     </main>
-    
+
     <footer class="footer">
         <h4 class="footer_name">Santiago Agudelo Alvarez</h4>
 
@@ -54,7 +94,71 @@
     </footer>
 
     <div class="alarm-container not-show">
-        
+        <div class="alarm-container_modal">
+            <div class="alarm-container_modal-head">
+                <h3>Configurar Alarma</h3>
+                <span class="icon-close alarm-container_modal-head_close"></span>
+            </div>
+    
+            <div class="alarm-container_modal-config">
+                <p class="alarm-container_modal-config_p">Horas:</p>
+                <div class="alarm-container_modal-config_opt">
+                    <p id="hours-up" class="alarm-container_modal-config_opt-up icon-chevron-up"></p>
+                    <select id="alarm-hours">
+                        <option value="1 AM">1 AM</option>
+                    </select>
+                    <p id="hours-down" class="alarm-container_modal-config_opt-down icon-chevron-down"></p>
+                </div>
+    
+                <p class="alarm-container_modal-config_p">Minutos:</p>
+                <div class="alarm-container_modal-config_opt">
+                    <p id="minutes-up" class="alarm-container_modal-config_opt-up icon-chevron-up"></p>
+                    <select id="alarm-minutes">
+                        <option value="15">15</option>
+                    </select>
+                    <p id="minutes-down" class="alarm-container_modal-config_opt-down icon-chevron-down"></p>
+                </div>
+    
+                <p class="alarm-container_modal-config_p">Sonido:</p>
+                <div class="alarm-container_modal-config_opt" id="sound-container">
+                    <select id="sounds">
+                        <option value="sirena">Sirena</option>
+                    </select>
+                    <span class="icon-folder-upload"></span>
+                </div>
+    
+                <div class="alarm-container_modal-config_title">
+                    <p class="alarm-container_modal-config_title-name">Nombre alarma:</p>
+                    <input class="alarm-container_modal-config_title-input" type="Llamar a..." >
+                </div>
+    
+                <div class="alarm-container_modal-config_buttons">
+                    <button class="button-blank alarm-container_modal-config_buttons-try"><u>Probar</u></button>
+                    <button class="button-blank alarm-container_modal-config_buttons-cancel">Cancelar</button>
+                    <button class="button alarm-container_modal-config_buttons-start">Iniciar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="alarm-try not-show">
+        <div class="alarm">
+            <div class="alarm_head">
+                <h3 class="alarm_head-title">Alarma</h3>
+                <p class="icon-close alarm_head-close"></p>
+            </div>
+
+            <div class="alarm_body">
+                <p class="icon-watch_later alarm_body-icon"></p>
+                <p class="alarm_body-name">Titulo Alarma</p>
+                <p class="alarm_body-hour">18:45</p>
+
+                <div class="alarm_body-btn">
+                    <button class="button button alarm_body-btn_button">Aceptar</button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>

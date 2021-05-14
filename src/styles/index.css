@@ -168,6 +168,12 @@ a:link {
   cursor: pointer;
 }
 
+a:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
 .button {
   padding: 0.8rem 3.5rem;
   font-family: "Roboto";
