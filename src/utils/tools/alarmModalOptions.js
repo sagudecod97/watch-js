@@ -1,13 +1,13 @@
 'use strict'
 
-export const alarmHours = (twelve = false) => {
+export const alarmHours = (mode) => {
     let optionsTwelve = []
 
-    if (twelve) {
+    if (mode == 12) {
         let flag = false;
         let amPM = 'AM';
         for (let i = 1; i <= 12; i++) {
-            let stringHour = `<option value="${i}-${amPM.toLowerCase()}">${i} ${amPM}</option>`;
+            let stringHour = `<option value="${i}-${amPM.toLowerCase()}">${i < 10 ? '0' + i : i} ${amPM}</option>`;
             optionsTwelve.push(stringHour);
 
             if (!flag && i == 12) {
@@ -23,7 +23,7 @@ export const alarmHours = (twelve = false) => {
     let optionsTwenty = [];
 
     for (let i = 0; i < 24; i++) {
-        let stringHour = `<option value="${i}">${i}</option>`;
+        let stringHour = `<option value="${i}">${i < 10 ? '0' + i : i}</option>`;
         optionsTwenty.push(stringHour);
     }
 
@@ -34,7 +34,7 @@ export const alarmMinutes = () => {
     let optionsMinutes = [];
 
     for (let i = 1; i <= 60; i++) {
-        let optionMinute = `<option value="${i}">${i}</option>`;
+        let optionMinute = `<option value="${i}">${i < 10 ? '0' + i : i}</option>`;
         optionsMinutes.push(optionMinute);
     }
 
