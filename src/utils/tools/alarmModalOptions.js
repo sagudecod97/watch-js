@@ -43,7 +43,6 @@ export const alarmMinutes = () => {
 
 export const alarmSounds = `
 <option value="alarm">Despertador</option>
-<option value="alarm">Sirena</option>
-<option value="alarm">Pajaros</option>
-<option value="alarm">Aleatorio</option>
+<option value="siren">Sirena</option>
+<option value="birds">Pajaros</option>
 `;

@@ -47,8 +47,10 @@ export class WatchMaker {
         let mainContent = document.getElementsByClassName('--main-content')[0];
         let alarmCount = document.getElementsByClassName('alarm-count')[0];
 
-        let { hours, minutes } = window.currentAlarm;
-
+        let { hours, minutes, sound, alarmName } = window.currentAlarm;
+        let soundsNames = {
+            'alarm': 'alarm-sound.mp3', 'siren': 'siren-sound.mp3', 'birds': 'birds-sound.mp3'
+        }       
         let pmHours = {
             1: 13, 2: 14, 3: 15, 4: 16, 5: 17, 6: 18,
             7: 19, 8: 20, 9: 21, 10: 22, 11: 23, 12: "00",
@@ -62,13 +64,18 @@ export class WatchMaker {
 
         if (`${hours}:${minutes}` == `${currentHour}:${currentMinutes}`) {
             if (typeof currentInterval !== 'undefined') {
+                let alarmAudio = new Audio(`assets/sounds/${soundsNames[sound]}`);
+                window.alarmAudio = alarmAudio;
+
+                alarmAudio.addEventListener("canplaythrough", () => {
+                    alarmAudio.play();
+                })
                 currentInterval.clearOne(idCurrentInterval);
                 tryAlarm.classList.remove('not-show');
                 mainContent.classList.remove('not-show');
                 alarmCount.classList.add('not-show');
             }
         }    
-
 
         const twentyToTwelve = {
             "13": 1, "14": 2, "15": 3, "16": 4, "17": 5, "18": 6,

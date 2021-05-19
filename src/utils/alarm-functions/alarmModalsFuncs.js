@@ -16,6 +16,8 @@ export const closeModalTryConfig = () => {
     let alarmContainer = document.getElementsByClassName('alarm-container')[0];
     let alarmTryContainer = document.getElementsByClassName('alarm-try')[0];
 
+    window.alarmAudio.pause()
+
     alarmCfg.classList.remove('not-show');
     alarmContainer.classList.add('not-show');
     alarmTryContainer.classList.add('not-show');
@@ -68,6 +70,7 @@ export const startAlarm = () => {
     let { hours, minutes, alarmName } = getAlarmInfo();
     
     alarmNameP.innerHTML = alarmName;
+    alarmCountP.innerHTML = transformHour(hours, minutes, hoursMode)
 
     alarmHourP.innerHTML = AlarmCountTime(true);
     alarmDateP.innerHTML = AlarmCountTime(false);
@@ -93,16 +96,49 @@ export const deactivateAlarm = () => {
 const getAlarmInfo = () => {
     const selectHours = document.getElementById('alarm-hours');
     const selectMinutes = document.getElementById('alarm-minutes');
+    const selectSounds = document.getElementById('sounds');
     const alarmName = document.getElementsByClassName('alarm-container_modal-config_title-input')[0];
 
     let obj = {
         hours: selectHours.value,
         minutes: selectMinutes.value,
         alarmName: alarmName.value,
+        sound: selectSounds.value,
     }
 
     window.currentAlarm = obj;
-    console.log(obj)
 
     return obj;
+}
+
+const transformHour = (hour, minutes, mode) => {
+    const twentyToTwelve = {
+        "13": 1, "14": 2, "15": 3, "16": 4, "17": 5, "18": 6,
+        "19": 7, "20": 8, "21": 9, "22": 10, "23": 11, "24": 12
+    }
+
+    if (hour.includes('pm') || hour.includes('am'))
+        hour = hour.slice('-')[0];
+
+    let hourString;
+
+    if (minutes < 10) {
+        minutes = '0' + minutes;
+    }
+
+    if (parseInt(hour) < 10)
+            hour = '0' + hour;
+
+    if (mode == 12) {
+        if (hour < 12) {
+            hourString = `${hour}:${minutes} am`;
+        } else {
+            hour = twentyToTwelve[hour];
+            hourString = `${hour}:${minutes} pm`;
+        }
+    } else {
+        hourString = `${hour}:${minutes}`;
+    };
+
+    return hourString;
 }
