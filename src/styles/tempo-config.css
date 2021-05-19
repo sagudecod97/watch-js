@@ -71,19 +71,19 @@
   font-size: 1.6rem;
 }
 
-.icon-chevron-up,
-.icon-chevron-down {
+.tempo-config_body-up,
+.tempo-config_body-down {
   font-size: 2rem;
   width: 10%;
   margin-top: 2rem;
   cursor: pointer;
 }
 
-.icon-chevron-up {
+.tempo-config_body-up {
   margin-left: 15%;
 }
 
-.icon-chevron-down {
+.tempo-config_body-down {
   margin-right: 15%;
   display: flex;
   justify-content: flex-end;

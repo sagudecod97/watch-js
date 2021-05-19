@@ -5,22 +5,22 @@ const IndexMain = () => {
 
     <div class="main_content-options">
         <label class="main_content-options_opt">
-            <input id="twelve" type="radio" />12 Horas
+            <input id="twelve" type="radio" value="12" />12 Horas
         </label>
 
         <div class="main_content-options_separator"></div>
 
         <label class="main_content-options_opt">
-            <input id="twenty-four" type="radio" checked />24 Horas
+            <input id="twenty-four" type="radio" value="24"/>24 Horas
         </label>
     </div>
 
     <div class="main_content-config">
-        <button class="button">CONFIGURAR</button>
+        <button class="button main_content-config_btn">CONFIGURAR</button>
     </div>
     `;
 
     return view;
-}
+};
 
 export default IndexMain;

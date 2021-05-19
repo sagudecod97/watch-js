@@ -8,25 +8,25 @@ const TempoConfig = () => {
 
         <div class="tempo-config_body">
             <p class="tempo-config_body-title hours-cfg">Horas</p>
-            <p class="icon-chevron-up"></p>
+            <p class="icon-chevron-up tempo-config_body-up"></p>
             <select class="tempo-config_body-select"  id="config-hours">
                 <option value="00">00</option>
             </select>
-            <p class="icon-chevron-down"></p>
+            <p class="icon-chevron-down tempo-config_body-down"></p>
 
             <p class="tempo-config_body-title minutes-cfg">Minutos</p>
-            <p class="icon-chevron-up"></p>
+            <p class="icon-chevron-up tempo-config_body-up"></p>
             <select class="tempo-config_body-select"  id="config-seconds">
                 <option value="10">10</option>
             </select>
-            <p class="icon-chevron-down"></p>
+            <p class="icon-chevron-down tempo-config_body-down"></p>
 
             <p class="tempo-config_body-title seconds-cfg">Segundos</p>
-            <p class="icon-chevron-up"></p>
+            <p class="icon-chevron-up tempo-config_body-up"></p>
             <select class="tempo-config_body-select"  id="config-seconds">
                 <option value="8">8</option>
             </select>
-            <p class="icon-chevron-down"></p>
+            <p class="icon-chevron-down tempo-config_body-down"></p>
 
             <p class="tempo-config_body-title --bigger-title">En Cero</p>
 

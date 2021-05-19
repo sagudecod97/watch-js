@@ -2,9 +2,61 @@ const Watches = () => {
     const view = `
     <div class="watches">
         <div class="watches_up">
+            <div class="watch-card">
+                <div class="watch-card_country">
+                    <p class="watch-card_country-name">España</p>
+                </div>
+
+                <p class="watch-card_hour">3:59:39</p>
+                <p class="watch-card_diff">Mañana, +7 H</p>
+            </div>
+
+            <div class="watch-card">
+                <div class="watch-card_country">
+                    <p class="watch-card_country-name">España</p>
+                </div>
+
+                <p class="watch-card_hour">3:59:39</p>
+                <p class="watch-card_diff">Mañana, +7 H</p>
+            </div>
+
+            <div class="watch-card">
+                <div class="watch-card_country">
+                    <p class="watch-card_country-name">España</p>
+                </div>
+
+                <p class="watch-card_hour">3:59:39</p>
+                <p class="watch-card_diff">Mañana, +7 H</p>
+            </div>
         </div>
 
         <div class="watches_down">
+            <div class="watch-card">
+                <div class="watch-card_country">
+                    <p class="watch-card_country-name">España</p>
+                </div>
+
+                <p class="watch-card_hour">3:59:39</p>
+                <p class="watch-card_diff">Mañana, +7 H</p>
+            </div>
+
+            <div class="watch-card">
+                <div class="watch-card_country">
+                    <p class="watch-card_country-name">España</p>
+                </div>
+
+                <p class="watch-card_hour">3:59:39</p>
+                <p class="watch-card_diff">Mañana, +7 H</p>
+            </div>
+
+            <div class="watch-card">
+                <div class="watch-card_country">
+                    <p class="watch-card_country-name">España</p>
+                </div>
+
+                <p class="watch-card_hour">3:59:39</p>
+                <p class="watch-card_diff">Mañana, +7 H</p>
+            </div>
         </div>
     </div>
     `;
@@ -38,6 +90,6 @@ const WatchesWatch = () => {
     return view;
 }
 
-export default {
+export {
     Watches, WatchCard, WatchesWatch
 };
