@@ -22,7 +22,7 @@ export class WatchMaker {
     }*/
 
     createIntervalWatch() {
-        let newInterval = setInterval(this['createAlarm'], 1000, this.mode, this.elem);
+        let newInterval = setInterval(this.createAlarm, 1000, this.mode, this.elem);
         this.intervals.push(newInterval);
         return newInterval;
     }
@@ -40,6 +40,7 @@ export class WatchMaker {
         let currentHour = new Date().getHours();
         let currentMinutes = new Date().getMinutes();
         let currentSeconds = new Date().getSeconds();
+
         let currentInterval = window.alarmWatch.watch;
         let idCurrentInterval = window.alarmWatch.id;
 

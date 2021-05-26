@@ -13,7 +13,6 @@ export const modeTime = (time) => {
             elem.innerHTML = `${currentHour}: ${currentMinutes}: ${currentSeconds} pm`;
         }
     } else {
-        console.log(4)
         elem.innerHTML = `${currentHour}: ${currentMinutes}: ${currentSeconds}`;
     };
 }

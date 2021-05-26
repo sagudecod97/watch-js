@@ -1,6 +1,7 @@
 'use strict'
 
 import { WatchMaker } from '../tools/watchMaker.js';
+import { changeOption } from '../tools/changeOption.js';
 import AlarmCountTime from '../../templates/alarmCountTime.js';
 
 export const fromConfigToTry = () => {
@@ -28,25 +29,6 @@ export const configUpAndDown = (event) => {
 
     let selectHours =  document.getElementById('alarm-hours');
     let selectMinutes = document.getElementById('alarm-minutes');
-
-    const changeOption = (target, down, selectOptions) => {
-        let currentOptIndex;
-        let options = selectOptions.options;
-
-        for (let i = 0; i < options.length; i++) {
-            if (options[i].selected)
-                currentOptIndex = i;
-        };
-        
-        if (down) {
-            if (currentOptIndex === 0) { return; };
-            options[currentOptIndex - 1].selected = true;
-        } else {
-            if (currentOptIndex === (options.length - 1)) { return; };
-
-            options[currentOptIndex + 1].selected = true;
-        }
-    }
 
     if (id.includes('hour'))
         changeOption(event.target, id.includes('down'), selectHours);
