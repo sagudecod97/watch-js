@@ -196,6 +196,10 @@ a:visited {
   cursor: pointer;
 }
 
+.stop-button {
+  background-color: rgb(255, 0, 0, 0.8);
+}
+
 .not-show {
   display: none;
 }

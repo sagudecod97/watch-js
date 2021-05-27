@@ -9,4 +9,7 @@ export const resetTimer = () => {
         sounds: '',
         nameTimer: '',
     };
+
+    clearInterval(window.timer.id);
+    window.timer = null;
 };

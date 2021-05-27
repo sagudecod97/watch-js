@@ -14,17 +14,34 @@ const timerConfigContainer = document.getElementsByClassName('timer-container_cf
 restartTimerBtn.addEventListener('click', resetTimer);
 editTimerBtn.addEventListener('click', () => timerConfigContainer.classList.remove('not-show'));
 
-startTimerBtn.addEventListener('click', () => {
+startTimerBtn.addEventListener('click', (event) => {
+    let { innerHTML } = event.target;
     let configModal = document.getElementsByClassName('timer-container_cfg')[0];
+    let timerCfg = window.timerConfig; 
     
-    if (typeof window.timerConfig === 'undefined') {
+    if (typeof timerCfg === 'undefined') {
         return configModal.classList.remove('not-show');
+    } else if (timerCfg.hours == 0 && timerCfg.minutes == 0 && timerCfg.seconds == 0) {
+        return;
     }
 
-    const newTimer = new Timer();
+    if (innerHTML === 'Iniciar') {
+        window.stopTimer = false;
+        event.target.innerHTML = 'Parar';
+        event.target.classList.add('stop-button');
+    } else if (innerHTML === 'Parar') {
+        window.stopTimer = true;
+        event.target.innerHTML = 'Iniciar';
+        event.target.classList.remove('stop-button');
+        return;
+    }
 
-    let timerId = newTimer.createIntervalTimer();
-    window.timer = { id: timerId, timer: newTimer };
+    if (!window.timer) {
+        const newTimer = new Timer();
+
+        let timerId = newTimer.createIntervalTimer();
+        window.timer = { id: timerId, timer: newTimer };
+    }
 })
 
 window.addEventListener('load', () => {
@@ -37,4 +54,5 @@ window.addEventListener('load', () => {
     selectMinutes.innerHTML = timerOptions();
     selectSeconds.innerHTML = timerOptions();
     selectSounds.innerHTML = alarmSounds;
+    window.timerMode = 'stop'
 });

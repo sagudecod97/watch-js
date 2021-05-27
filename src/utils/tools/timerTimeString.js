@@ -1,5 +1,4 @@
 export const timerTimeString = (hours, minutes, seconds) => {
-    console.log("TimeString: ", hours, minutes, seconds)
     if (String(hours).length === 1)
         hours = '0' + hours;
 

@@ -3,8 +3,6 @@ export const createSoundAlarm = (sound) => {
         'alarm': 'alarm-sound.mp3', 'siren': 'siren-sound.mp3', 'birds': 'birds-sound.mp3'
     }       
 
-    console.log(soundsNames[sound], sound)
-
     let alarmAudio = new Audio(`assets/sounds/${soundsNames[sound]}`);
     window.alarmAudio = alarmAudio;
 

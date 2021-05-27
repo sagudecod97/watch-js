@@ -7,7 +7,13 @@ import { createSoundAlarm } from '../tools/createSoundAlarm.js';
 export const timerConfigToTry = () => {
     const timerConfigContainer = document.getElementsByClassName('timer-container_cfg')[0];
     const timerDoneContainer = document.getElementsByClassName('timer-container_done')[0];
-    let { sounds } = window.timerConfig;
+    const selectSounds = document.getElementById('config-sounds');
+    let { sounds } = window.timerConfig || { sounds: selectSounds.value };
+    window.tryTimer = true;
+
+    if (sounds.length === 0) {
+        sounds = selectSounds.value;
+    }
     
     createSoundAlarm(sounds);
     timerConfigContainer.classList.add('not-show');
