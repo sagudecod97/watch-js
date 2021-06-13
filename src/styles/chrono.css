@@ -2,22 +2,26 @@
   position: absolute;
   width: 35vw;
   height: 250px;
-  top: 20%;
-  left: 45%;
+  top: 10%;
+  left: 40%;
+  transform: translateX(-50%);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .chrono_time {
-  width: 100%;
+  position: absolute;
+  width: 600px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 5%;
   padding-right: 4.9rem;
   font-size: 8.6rem;
   height: 8.6rem;
   font-family: "Orbitron";
   text-align: center;
+  white-space: nowrap;
 }
 
 .chrono_time-ms {
@@ -29,10 +33,11 @@
 
 .chrono-laps {
   position: absolute;
-  width: 35vw;
-  height: 200px;
-  top: 20%;
-  left: 6%;
+  width: 55vw;
+  height: 40%;
+  top: 55%;
+  left: 40%;
+  transform: translateX(-50%);
 }
 
 .chrono_btns {
@@ -42,6 +47,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  padding-top: 21.5vh;
 }
 
 .chrono-laps_titles {
@@ -49,14 +55,29 @@
   justify-content: space-between;
   font-size: 1.6rem;
   padding: 0.5rem 0;
+  padding-right: 2rem;
+}
+
+.chrono-laps_titles-lap {
+  width: 10%;
+  padding-left: 1%;
+}
+
+.chrono-laps_titles-total {
+  width: 25%;
 }
 
 .chrono-laps_time {
   display: flex;
-  flex-wrap: wrap;
-  height: 17rem;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  height: 14rem;
   overflow-y: auto;
+  overflow-x: hidden;
   padding-right: 0.5rem;
+  border-top: 1px solid #020402;
+  padding-top: 15px;
 }
 
 .chrono-laps_time::-webkit-scrollbar {
@@ -72,11 +93,53 @@
 }
 
 .chrono-laps_time-lap {
+  width: 100%;
+  min-width: 52vw;
   display: flex;
   justify-content: space-between;
-  width: 100%;
   font-size: 1.6rem;
   font-family: "Orbitron";
-  padding-bottom: 0.7rem;
-  min-width: 30rem;
+  padding-bottom: 1rem;
+}
+
+.chrono-laps_time-lap p {
+  width: 35%;
+  text-align: start;
+  padding-left: 8%;
+}
+
+.chrono-laps_time-lap p:nth-child(1) {
+  width: 5%;
+  text-align: center;
+  padding-left: 0;
+}
+
+.chrono-laps_time-lap p:nth-child(2) {
+  padding-left: 16%;
+}
+
+.chrono-stop {
+  background-color: rgb(255, 0, 0, 0.8) !important;
+}
+
+@media (max-width: 1024px) {
+  .chrono {
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: rebeccapurple;
+  }
+
+  .chrono_time {
+    width: auto;
+    font-size: 3.5rem;
+  }
+
+  .chrono-laps {
+    position: initial;
+    height: 70%;
+    width: 100%;
+    background-color: gray;
+  }
 }

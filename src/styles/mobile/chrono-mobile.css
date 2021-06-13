@@ -1,0 +1,7 @@
+@media (max-width: 1024px) {
+  .chrono {
+    position: initial;
+    width: 100vw;
+    background-color: rebeccapurple;
+  }
+}
