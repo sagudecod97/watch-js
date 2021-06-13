@@ -202,7 +202,21 @@
     font-size: 1.3rem;
   }
 
+  .chrono-laps_time {
+    padding: 15px 0rem 0 1rem;
+  }
+
   .chrono-laps_time-lap {
     font-size: 1.4rem;
+    padding-right: 2rem;
+  }
+
+  .chrono-laps_time-lap p {
+    width: 30%;
+    padding-left: 0;
+  }
+
+  .chrono-laps_time-lap p:nth-child(2) {
+    padding-left: 0%;
   }
 }
