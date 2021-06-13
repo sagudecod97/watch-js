@@ -39,7 +39,7 @@ btnLap.addEventListener('click', (event) => {
       window.chronoTime = { hours: 0, minutes: 0, seconds: 0, mili: 0, };
       window.chronoStop = null;
       window.firstLap = null;
-      chronoTime.innerHTML = `<p class="chrono_time">00:00:00<span class="chrono_time-ms">.00</span></p>`;
+      chronoTime.innerHTML = `00:00:00<span class="chrono_time-ms">.00</span>`;
       
       while(chronoLapsTime.firstChild) { chronoLapsTime.lastChild.remove() };
 

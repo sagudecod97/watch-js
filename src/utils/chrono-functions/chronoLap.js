@@ -18,14 +18,13 @@ const ChronoLap = (lap, totalTime) => {
     }
 
     const view = `
-    <div class="chrono-laps_time-lap">
         <p>${lap}</p>
         <p>${hours}:${minutes}:${seconds}:${String(mili).slice(0,2)}</p>
         <p>${hours}:${minutes}:${seconds}:${String(mili).slice(0,2)}</p>
-    </div>
     `;
 
     let divLap = document.createElement('div');
+    divLap.classList.add('chrono-laps_time-lap')
     divLap.innerHTML = view;
 
     return divLap;
