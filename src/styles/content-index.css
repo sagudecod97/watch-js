@@ -1,0 +1,55 @@
+.main_content-hour {
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  left: 20%;
+  font-family: "Orbitron";
+  font-size: 9.5rem;
+  font-weight: 500;
+  transition: all;
+}
+
+.main_content-date {
+  position: absolute;
+  top: 15%;
+  left: 27%;
+  font-family: "Roboto";
+  font-size: 2rem;
+}
+
+.main_content-options {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 26%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 25px;
+  min-width: 240px;
+}
+
+.main_content-options_opt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100px;
+  min-height: 25px;
+  font-size: 18px;
+  font-family: "Roboto";
+}
+
+#twelve:checked {
+  color: black;
+}
+
+.main_content-config {
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

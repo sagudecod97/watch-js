@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css" type="text/css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="assets/fonts/style.css">
+    <script src="utils/chrono-scripts/chrono-script.js" defer type="module" ></script>
+    <title>Watch JS</title>
+</head>
+
+<body>
+    <header class="header">
+        <ul class="header_list">
+            <li class="header_list-item alarm-head">
+                <a href="/index.html">Alarma</a>
+            </li>
+            <li class="header_list-item timer-head">
+                <a href="">Temporizador</a>
+            </li>
+            <li class="header_list-item chrono-head active">
+                <a href="">Cronómetro</a>
+            </li>
+        </ul>
+
+        <div class="header_shadow"></div>
+    </header>
+
+    <main class="main">
+        <div id="main-content" class="main_content">
+            <div class="chrono">
+                <p class="chrono_time">00:00:00<span class="chrono_time-ms">.00</span></p>
+        
+                <div class="chrono_btns">
+                    <button class="button-blank chrono_btns-lap"><u>Reiniciar</u></button>
+                    <button class="button chrono_btns-start">Iniciar</button>
+                </div>
+            </div>
+
+            <div class="chrono-laps">
+                <div class="chrono-laps_titles">
+                    <p class="chrono-laps_titles-lap">Vuelta</p>
+                    <p class="chrono-laps_titles-hour">Hora</p>
+                    <p class="chrono-laps_titles-total">Tiempo total</p>
+                </div>
+        
+                <div class="chrono-laps_time">
+                </div>
+            </div>
+        </div>
+        <div class="main_shadow"></div>
+
+        <img class="main_img" alt="Watch" src="assets/images/murray-campbell-B_TdfGFuGwA-unsplash.jpg" />
+    </main>
+
+    <footer class="footer">
+        <h4 class="footer_name">Santiago Agudelo Alvarez</h4>
+
+        <ul class="footer_social">
+            <li class="footer_social-item">
+                <a class="footer_social-item_link" href="https://www.linkedin.com/in/sagudecod">
+                    <span class="icon-linkedin-square"></span>
+                </a>
+            </li>
+            <li class="footer_social-item">
+                <a class="footer_social-item_link" href="https://twitter.com/sagudecod97">
+                    <span class="icon-twitter"></span>
+                </a>
+            </li>
+            <li class="footer_social-item">
+                <a class="footer_social-item_link" href="https://github.com/sagudecod97">
+                    <span class="icon-github"></span>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

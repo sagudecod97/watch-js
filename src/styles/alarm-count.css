@@ -1,0 +1,99 @@
+/*
+    Rich Black FOGRA 39: 020402
+*/
+
+.alarm-count {
+  min-width: 65%;
+  padding-left: 5%;
+  padding-top: 8%;
+  min-height: 88%;
+  position: absolute;
+  top: 5%;
+  left: 3%;
+}
+
+.alarm-count_hour {
+  font-size: 4.6rem;
+  padding-left: 9%;
+  font-family: "Orbitron";
+  color: #020402;
+}
+
+.alarm-count_date {
+  font-size: 2.6rem;
+  font-family: "Roboto";
+  color: #020402;
+  width: 50%;
+}
+
+.alarm-count_separator {
+  background-color: #fff;
+  width: 2px;
+  height: 50%;
+  position: absolute;
+  top: 20%;
+  left: 55%;
+  transform: rotate(35deg);
+  box-shadow: 0 0 3px #ccc;
+}
+
+.alarm-count_title {
+  font-size: 3rem;
+  font-family: "Roboto";
+  color: #020402;
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  left: 70%;
+}
+
+.alarm-count_alarm {
+  font-size: 4.6rem;
+  font-family: "Roboto";
+  color: #020402;
+  width: 50%;
+  font-weight: 500;
+  position: absolute;
+  top: 35%;
+  left: 70%;
+}
+
+.alarm-count_icon-alarm {
+  font-size: 4.6rem;
+  font-family: "Roboto";
+  color: #020402;
+  width: 50%;
+  font-weight: 700;
+  position: absolute;
+  top: 35%;
+  left: 84%;
+}
+
+.alarm-count_temp {
+  font-size: 3rem;
+  font-family: "Roboto";
+  color: #020402;
+  width: 50%;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+}
+
+.alarm-count_icon-stop {
+  font-size: 3rem;
+  font-family: "Roboto";
+  color: #020402;
+  width: 50%;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 85%;
+}
+
+.alarm-count_btn {
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+  font-size: 1.6rem;
+}

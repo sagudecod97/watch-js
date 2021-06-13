@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css" type="text/css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="assets/fonts/style.css">
+    <script src="utils/timer-scripts/timer-script.js" defer type="module" ></script>
+    <script src="utils/timer-scripts/timer-config.js" defer type="module" ></script>
+    <script src="utils/timer-scripts/timer-done.js" defer type="module" ></script>
+    <title>Watch JS</title>
+</head>
+
+<body>
+    <header class="header">
+        <ul class="header_list">
+            <li class="header_list-item alarm-head">
+                <a href="/index.html">Alarma</a>
+            </li>
+            <li class="header_list-item timer-head active">
+                <a href="">Temporizador</a>
+            </li>
+            <li class="header_list-item chrono-head">
+                <a href="">Cronómetro</a>
+            </li>
+            <li class="header_list-item watch-head">
+                <a href="">Reloj</a>
+            </li>
+        </ul>
+
+        <div class="header_shadow"></div>
+    </header>
+
+    <main class="main">
+        <div id="main-content" class="main_content">
+            <div class="tempo">
+                <h3 class="tempo_time">00:00:00</h3>
+        
+                <div class="tempo_buttons">
+                    <button class="button-blank tempo_buttons-edit"><u>Editar temporizador </u></button>
+                    <button class="button-blank tempo_buttons-restart">Reiniciar</button>
+                    <button class="button tempo_buttons-start">Iniciar</button>
+                </div>
+            </div>
+        </div>
+        <div class="main_shadow"></div>
+
+        <img class="main_img" alt="Watch" src="assets/images/murray-campbell-B_TdfGFuGwA-unsplash.jpg" />
+    </main>
+
+    <footer class="footer">
+        <h4 class="footer_name">Santiago Agudelo Alvarez</h4>
+
+        <ul class="footer_social">
+            <li class="footer_social-item">
+                <a class="footer_social-item_link" href="https://www.linkedin.com/in/sagudecod">
+                    <span class="icon-linkedin-square"></span>
+                </a>
+            </li>
+            <li class="footer_social-item">
+                <a class="footer_social-item_link" href="https://twitter.com/sagudecod97">
+                    <span class="icon-twitter"></span>
+                </a>
+            </li>
+            <li class="footer_social-item">
+                <a class="footer_social-item_link" href="https://github.com/sagudecod97">
+                    <span class="icon-github"></span>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <div class="timer-container_cfg not-show">
+        <div class="tempo-config">
+            <div class="tempo-config_head">
+                <h3 class="tempo-config_head-title">Temporizador</h3>
+                <span class="tempo-config_head-icon icon-close"></span>
+            </div>
+    
+            <div class="tempo-config_body">
+                <p class="tempo-config_body-title hours-cfg">Horas</p>
+                <p class="icon-chevron-up tempo-config_body-up t-cfg_hours-up"></p>
+                <select class="tempo-config_body-select"  id="config-hours">
+                    <option value="00">00</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                </select>
+                <p class="icon-chevron-down tempo-config_body-down t-cfg_hours-down"></p>
+    
+                <p class="tempo-config_body-title minutes-cfg">Minutos</p>
+                <p class="icon-chevron-up tempo-config_body-up t-cfg_minutes-up"></p>
+                <select class="tempo-config_body-select"  id="config-minutes">
+                </select>
+                <p class="icon-chevron-down tempo-config_body-down t-cfg_minutes-down"></p>
+    
+                <p class="tempo-config_body-title seconds-cfg">Segundos</p>
+                <p class="icon-chevron-up tempo-config_body-up t-cfg_seconds-up"></p>
+                <select class="tempo-config_body-select"  id="config-seconds">
+                </select>
+                <p class="icon-chevron-down tempo-config_body-down t-cfg_seconds-down"></p>
+    
+                <p class="tempo-config_body-title --bigger-title">En Cero</p>
+    
+                <input checked type="radio" id="stop-tempo">
+                <label class="tempo-config_body-title --medium-title" for="stop-tempo">
+                    Parar temporizador
+                </label>
+    
+                <input type="radio" id="reset-tempo">
+                <label class="tempo-config_body-title --medium-title" for="reset-tempo">
+                    Reiniciar temporizador
+                </label>
+    
+                <p class="tempo-config_body-title --bigger-title">Sonido</p>
+                <input type="file" class="tempo-config_body-sound" />
+                <select id="config-sounds">
+                </select>
+                <p class="icon-folder-upload"></p>
+                
+                <p class="tempo-config_body-title --bigger-title">Título</p>
+                <input class="tempo-config_body-name" type="text" placeholder="Recordar...">
+    
+                <div class="tempo-config_body-buttons">
+                    <button class="button-blank --btn-left tempo-config_body-buttons_try"><u>Probar</u></button>
+                    <button class="button-blank tempo-config_body-buttons_cancel">Cancelar</button>
+                    <button class="button tempo-config_body-buttons_close">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="timer-container_done not-show">
+        <div class="tempo-done">
+            <div class="tempo-done_head">
+                <h3 class="tempo-done_head-title">Temporizador</h3>
+    
+                <p class="tempo-done_head-icon icon-close"></p>
+            </div>
+    
+            <p class="tempo-done_icon icon-stopwatch"></p>
+            <p class="tempo-done_name">Nombre alarma</p>
+            <p class="tempo-done_timer">00:00:00</p>
+    
+            <button class="tempo-done_btn button">Aceptar</button>
+        </div>
+    </div>
+</body>
+</html>
