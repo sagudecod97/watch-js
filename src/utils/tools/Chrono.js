@@ -40,7 +40,7 @@ class Chrono {
         let timeString = chronoString({ hours, minutes, seconds, mili }, false);
         timeString.miliseconds = String(timeString.miliseconds).slice(0,2)
         chronoTime.innerHTML = `
-        <p class="chrono_time">${timeString.time}<span class="chrono_time-ms">.${timeString.miliseconds}</span></p>`;
+        ${timeString.time}<span class="chrono_time-ms">.${timeString.miliseconds}</span>`;
 
         window.chronoTime = { hours, minutes, seconds, mili };
 

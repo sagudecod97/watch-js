@@ -124,10 +124,24 @@
     width: 100%;
   }
 
+  .main {
+    height: 75%;
+  }
+
   .main_content {
-    background-color: red;
     display: flex;
     flex-direction: column;
-    clip-path: initial !important;
+    align-items: center;
+    clip-path: initial;
+  }
+
+  .footer_name {
+    font-size: 1.3rem;
+  }
+
+  .footer_social {
+    width: 40%;
+    max-width: 200px;
+    min-width: 0;
   }
 }
