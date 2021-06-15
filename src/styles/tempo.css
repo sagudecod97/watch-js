@@ -25,3 +25,67 @@
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 1024px) {
+  .tempo  {
+    width: 100%;
+    left: 0;
+  }
+
+  .tempo_time {
+    font-size: 12.8rem;
+  }
+
+  .tempo_buttons button {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .tempo {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .tempo_time {
+    padding-bottom: 20%;
+    padding-top: 20%;
+    width: 100%;
+    font-size: 4.8rem;
+    text-align: center;
+  }
+
+  .tempo_buttons {
+    width: 100%;
+    position: relative;
+  }
+
+  .tempo_buttons button {
+    font-size: 1.2rem;
+    max-width: 150px;
+  }
+
+  .tempo_buttons button:nth-child(1) {
+    position: absolute;
+    order: 3;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 200px;
+  }
+
+  .tempo_buttons button:nth-child(2) {
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    order: 1;
+    width: 50%;
+  }
+
+  .tempo_buttons button:nth-child(3) {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    order: 2;
+    width: 50%;
+  }
+}

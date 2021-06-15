@@ -58,3 +58,23 @@
   font-size: 1.6rem;
   padding-bottom: 3.5rem;
 }
+
+@media (max-width: 1024px) {
+  .tempo-done {
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 65%;
+    height: 30%;
+  }
+}
+
+@media (max-width: 767px) {
+  .tempo-done {
+    top: 15%;
+    left: 10%;
+    transform: translate(-5%, 0%);
+    width: 90%;
+    height: 50%;
+  }
+}
