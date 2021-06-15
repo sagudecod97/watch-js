@@ -145,3 +145,27 @@
 .--btn-left {
   justify-self: flex-start;
 }
+
+@media (max-width: 1024px) {
+  .tempo-config {
+    top: 10%;
+    left: 50%;
+    transform: translate(-50, 0);
+    height: 80%;
+    width: 70vw;
+  }
+
+  .tempo-config_body-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .tempo-config {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+  }
+}

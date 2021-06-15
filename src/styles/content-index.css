@@ -53,3 +53,42 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 1024px) {
+  .main_content-date {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .main_content-hour {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .main_content-options {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .main_content-config {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 767px) {
+  .main_content-date {
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .main_content-hour {
+    font-size: 5.2rem;
+    padding-top: 2.5rem;
+  }
+
+  .main_content-config {
+    padding-top: 20%;
+  }
+}
