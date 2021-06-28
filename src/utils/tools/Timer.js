@@ -14,8 +14,6 @@ class Timer {
         let timerId = window.timer.id;
         let timerMain = document.getElementsByClassName('tempo_time')[0];
 
-        console.log("Timer: ", hours, minutes, seconds);
-
         let timerDoneModal = document.getElementsByClassName('timer-container_done')[0];
         let timerDoneName = document.getElementsByClassName('tempo-done_name')[0];
         let timerDoneTime = document.getElementsByClassName('tempo-done_timer')[0];

@@ -39,6 +39,7 @@
   align-items: center;
   padding: 5% 0;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .tempo-config_body::-webkit-scrollbar {

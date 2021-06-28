@@ -8,7 +8,6 @@ export const timerDoneToMain = () => {
     const timerMain = document.getElementsByClassName('tempo_time')[0];
     let { hours, minutes, seconds } = window.timerReset;
 
-    console.log("Timer done to Main: ",);
 
     if (window.timerMode === 'reset') {
         if (window.timer) {
@@ -34,7 +33,6 @@ export const timerDoneToConfig = () => {
     const timerConfigContainer = document.getElementsByClassName('timer-container_cfg')[0];
     const stopStartBtn = document.getElementsByClassName('tempo_buttons-start')[0];
     const timerMain = document.getElementsByClassName('tempo_time')[0];
-    let { hours, minutes, seconds } = window.timerReset;
 
     if (window.tryTimer) {
         timerDoneContainer.classList.add('not-show');
@@ -53,7 +51,6 @@ export const timerDoneToConfig = () => {
             window.timer = null;
         }
 
-        timerMain.innerHTML = timerTimeString(hours, minutes, seconds)
 
         const newTimer = new Timer();
 

@@ -7,6 +7,20 @@ import AlarmCountTime from '../../templates/alarmCountTime.js';
 export const fromConfigToTry = () => {
     let alarmCfg = document.getElementsByClassName('alarm-container_modal')[0];
     let alarmTry = document.getElementsByClassName('alarm-try')[0];
+    let sound = document.getElementById('sounds').value;
+
+    console.log(sound.value)
+
+    let soundsNames = {
+        'alarm': 'alarm-sound.mp3', 'siren': 'siren-sound.mp3', 'birds': 'birds-sound.mp3'
+    }
+
+    let alarmAudio = new Audio(`assets/sounds/${soundsNames[sound]}`);
+    window.alarmAudio = alarmAudio;
+
+    alarmAudio.addEventListener("canplaythrough", () => {
+        alarmAudio.play();
+    })
 
     alarmCfg.classList.add('not-show');
     alarmTry.classList.remove('not-show')
@@ -51,7 +65,7 @@ export const startAlarm = () => {
 
     let { hours, minutes, alarmName } = getAlarmInfo();
     
-    alarmNameP.innerHTML = alarmName;
+    alarmNameP.innerHTML = alarmName.length === 0  ? 'Nombre alarma' : alarmName;
     alarmCountP.innerHTML = transformHour(hours, minutes, hoursMode)
 
     alarmHourP.innerHTML = AlarmCountTime(true);
